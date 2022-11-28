@@ -1,5 +1,7 @@
 # Sample THEOlive player in React
 
+![theolive player](https://cdn.theo.live/github/theolive-player.PNG)
+
 ## License
 
 This projects falls under the license as defined in https://github.com/THEOplayer/license-and-disclaimer.
