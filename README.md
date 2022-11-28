@@ -8,7 +8,7 @@ This projects falls under the license as defined in https://github.com/THEOplaye
 
 ## Overview
 
-This project contains a basic implementation of a React App using THEOplayer as a React Component.
+This project contains a basic implementation of a React App using THEOlive player.
 
 ## Project setup
 
