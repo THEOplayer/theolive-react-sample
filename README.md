@@ -26,21 +26,31 @@ You can start the application by running `npm run start`. It compiles and runs t
 
 This component will import two important files:
 
--   `import { Player } from "@theolive/player"`: everything related to the player functionality
--   `import "@theolive/player/THEOLive.css"`: the specific CSS for the THEOlive player. If you want to use your own styling and UI, please visit https://github.com/THEOplayer/theolive-chromeless-react-sample.
+```js
+import { Player } from "@theolive/player"; // needed for player functionality
+import "@theolive/player/THEOLive.css"; // needed for default THEOlive player styling
+```
+
+If you want to use your own styling and UI, please visit https://github.com/THEOplayer/theolive-chromeless-react-sample.
 
 Inside the component, we'll wait until the necessary elements are mounted and call for our player to be initialized.
 
 ### Loading our channel inside [`App.tsx`](./src/App.tsx)
 
-Inside `App.tsx`, we'll handle the loading of our channel: once our player is available, we'll call `await player.loadChannel("your-channel-id")` to load the manifest and start playing content.
+Inside `App.tsx`, we'll handle the loading of our channel: once our player is available, we will load our channel by passing the `channelId` which will load the manifest and start playing content
+
+```js
+await player.loadChannel("your-channel-id");
+```
 
 ### Listening on events
 
 THEOlive offers the option to listen on certain events the player can throw. As an example: you can register on eventListener that will listen for the player to be paused, and perform an action on it. This can be done by the following code:
 
 ```js
-player.addEventListener("pause", (e) => console.log(`The player got paused on ${e.date}`));`
+player.addEventListener("pause", (e) =>
+    console.log(`The player got paused on ${e.date}`)
+);
 ```
 
 Please visit [`App.tsx`](./src/App.tsx) for more examples.
