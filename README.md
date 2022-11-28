@@ -39,7 +39,9 @@ Inside `App.tsx`, we'll handle the loading of our channel: once our player is av
 
 THEOlive offers the option to listen on certain events the player can throw. As an example: you can register on eventListener that will listen for the player to be paused, and perform an action on it. This can be done by the following code:
 
-`player.addEventListener("pause", (e) => console.log(`The player got paused on ${e.date}`));`
+```js
+player.addEventListener("pause", (e) => console.log(`The player got paused on ${e.date}`));`
+```
 
 Please visit [`App.tsx`](./src/App.tsx) for more examples.
 
